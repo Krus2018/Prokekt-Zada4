@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style>
+ p {
+    color: black;
+    transition: color 0.5s;
+  }
+  
+  p:hover {
+    color: red;
+  }
+body {
+background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614372398_4-p-svetlii-fon-bumaga-6.jpg);
+}
+.pagination {
+        display: inline-block;
+      }
+
+      .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      .pagination a.active {
+        background-color: orange;
+        color: white;
+      }
+
+      .pagination a:hover:not(.active) {
+        background-color: #ddd;
+      }
+ button {
+    background: #008EB0; /* Синий цвет фона */
+    color: #fff; /* Белый цвет текста */
+    border: none; /* Убираем рамку */
+    padding: 1rem 1.5rem; /* Поля вокруг текста */
+    margin-bottom: 1rem; /* Отступ снизу */ 
+   }
+   .green { background: #73A353; }
+   .red { background: #C1172C; }
+   .orange { background: #ff9e42; }
+aside {
+                width: 27%;
+                padding: 6px;
+                margin-right: 16px;
+                float: right;
+                background-color: orange;
+}
+.modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        bottom: 0;
+        background-color: #ffc996;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+      }
+
+      /* The Close Button */
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-header {
+        padding: 2px 16px;
+        background-color: #ff9e42;
+        color: white;
+      }
+
+      .modal-body {
+        padding: 2px 16px;
+      }
+
+      .modal-footer {
+        padding: 2px 16px;
+        height: 10%;
+        background-color: #ff9e42;
+        color: white;
+      }
+
+      /* Add Animation */
+      @-webkit-keyframes slideIn {
+        from {
+          bottom: -300px;
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          bottom: -300px;
+          opacity: 0;
+        }
+        to {
+          bottom: 0;
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+.img{
+width: 30%;
+}
+.all-browsers {
+margin: 0;
+padding: 5px;
+background-color:#ff9e42;
+}
+.all-browsers > h1, .browser {
+ margin: 10px;
+ padding: 5px;
+}
+.browser {
+background: #ffc996;
+}
+.browser >h2, p {
+margin: 4px;
+font-size: 90%;
+}
+</style>
+<meta charset="UTF-8">
+<title>Структура сайта</title>
+</head>
+<body>
+<section class="all-browsers" id="section1">
+    <header id="header">
+    <h1>Какие бывают сорта мандаринов</h1>
+</header>
+<nav id="nav">
+    <ul>
+        <li><a href="#header">Главная</a></li>
+        <li><a href="#article5">Джем из мандаринов</a></li>
+        <li><a href="#article6">Насыпной пирог с мандаринами</a></li>
+        <li><a href="#article7">Пирог мандариновый</a></li>
+        <li><a href="#article8">Мармелад мандариновый</a></li> 
+        <li><a href="#footer">Автор</a></li>
+    </ul>
+</nav>
+    <article class="browser" id="article1">
+        <h2>Мурркот</h2>
+        <p>Сорт мандаринов небольшого размера (до 8 см). Это гибрид танжерина, который привозят из Перу и Бразилии.<br>
+        Тонкая желто-оранжевая кожура плохо очищается, но открывает ароматную мякоть с косточками.
+        Мандарин встречается на полках магазинов с ноября по февраль.</p>
+    </article>
+
+    <article class="browser" id="article2">
+        <h2>Клементины</h2>
+        <p>Высокого качества приезжают в Россию в октябре. Это один из самых сладких сортов марокканских мандаринов.<br>
+        Его легко отличить по оранжево-красной кожуре. У клементина сочная ярко-желтая мякоть без косточек.</p>
+    </article>
+    <article class="browser" id="article3">
+        <h2>Нова</h2>
+        <p>сорт мандаринов среднего размера с оранжевой кожурой встречается на полках гипермаркетов в декабре.<br>
+           Как и клементины, это сорт из Марокко. Сочные дольки с богатым сладким вкусом не содержат косточек.</p>
+    </article>
+
+    <article class="browser" id="article4">
+        <h2>Шива-микан</h2>
+        <p>Самый мелкий сорт мандаринов из Китая продается у нас с конца октября.<br>
+        Гладкая ярко-желтая кожура фруктов легко отделяется. Внутри скрывается кисло-сладкая мякоть с косточками.</p>
+    </article>
+</section>
+<section class="all-browsers" id="section2">
+    <header id="header">
+    <h1>Рецепты из мандаринов</h1>
+</header>
+    <article class="browser" id="article5">
+        <h2>Джем из мандаринов</h2>
+        <p>Очень вкусный джем из мандаринов привлекает своим ярким цветом и насыщенным цитрусовым ароматом.<br>
+        Джем получается довольно густым, его хорошо использовать для выпечки или как добавку к блинам, сырникам и свежим булочкам.</p>
+     <img src="https://img1.russianfood.com/dycontent/images_upl/217/sm_216301.jpg"  class="rounded-circle" width="200" height="200" >
+    <h3> Rounded-Circle </h3>
+    </article>
+    <article class="browser" id="article6">
+        <h2>Насыпной пирог с мандаринами</h2>
+        <p>Очень вкусный, необычный пирог с мандариновой начинкой - прекрасное угощение для сладкоежек! Песочное тесто представляет собой масляно-мучную крошку, которая насыпается в форму, поэтому пирог называется насыпным.<br> 
+         В качестве начинки выступают свежие мандарины, которые в готовом пироге, особенно после полного его остывания, напоминают фруктовую желейную начинку-конфи.</p>
+    <img src="https://img1.russianfood.com/dycontent/images_upl/491/sm_490610.jpg" class="rounded" width="200" height="200">
+ <h3> Rounded </h3>
+</article>
+    <article class="browser" id="article7">
+        <h2>Пирог из мандаринов</h2>
+        <p>Предлагаю сегодня приготовить самый новогодний пирог из всех новогодних – мандариновый!<br> 
+         Даже процесс приготовления этого пирога создаст в доме новогоднее настроение, потому что какой же Новый год без мандаринов.<br>
+         :) Пирог готовить просто, получается он вкусным и ароматным!</p>
+     <img src="https://img1.russianfood.com/dycontent/images_upl/380/sm_379293.jpg" class="img-thumbnail" width="200" height="200">
+ <h3> Img-Thumbnail </h3>
+    </article>
+
+    <article class="browser" id="article8">
+        <h2>Мандариновый мармелад</h2>
+        <p>Мандариновый мармелад на агар-агаре – прекрасное домашнее лакомство. Намного вкуснее покупного!<br>
+         Мармелад на агар-агаре хорошо держит форму, а главное, в нём нет никаких сомнительных добавок.<br> 
+       Мармелад нежный, кисло-сладкий, с цитрусовым вкусом и ароматом.</p>
+    <img src="https://img1.russianfood.com/dycontent/images_upl/571/sm_570358.jpg" width="200" height="200">
+    </article>
+</section>
+<!-- Trigger/Open The Modal -->
+    <button class="orange" id="myBtn">Секретик</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Тайная мандаринка</h2>
+        </div>
+        <div class="modal-body">
+          <img src="https://www.funnyart.club/uploads/posts/2023-02/thumbs/1675570267_www-funnyart-club-p-smeshnaya-alena-shutki-13.png" width="350" height="350">
+          <img src="https://i.vimeocdn.com/portrait/15952544_640x640" width="350" height="350">
+          <img src="http://vignette3.wikia.nocookie.net/annoyingorange/images/6/6c/.028_Annoying_Orange_%26_Zachary_28_24_25_20_22.PNG/revision/latest/scale-to-width-down/2000?cb=20161227000940" width="350" height="350">
+        <aside>Главный герой этого необычного сериала – Апельсин. Он любит доводить других героев до истерики, достает их вопросами, гримасничает.<br>
+                В общем – типичный тролль. Вмонтированные в фрукт человеческие глаза и рот делают персонажа одновременно пугающим и смешным.
+                Первый выпуск сериала вышел на ютубе 9 октября 2009 года. Автор проекта – Дэйн Бодиэймер. Он же озвучивает Апельсина. В первой серии жертвой своего троллинга он выбрал Яблоко. И обращение Hey Apple (Эй, Яблоко) вскоре стало мемом. В конце эпизода яблоко “погибает” от рук повара.
+        Другие персонажи сериала: Помидорка (её Апельсин путает с погибшим Яблоком), Тыква (её Апельсин называет своим старшим братом), Груша (лучший друг Апельсина), Маракуйя (в неё влюбляется Апельсин), а также Маленькое Яблочко, Зефир, Грейпфрут и несколько второстепенных персонажей.</aside>
+        </div>
+        <div class="modal-footer">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+<div class="pagination">
+      <a href="Ссылка3.html">&laquo;</a>
+      <a class="active" href="Ссылка1.html">1</a>
+      <a href="Ссылка2.html">2</a>
+      <a href="Ссылка3.html">3</a>
+      <a href="Ссылка2.html">&raquo;</a>
+    </div>
+<footer id="footer">
+    <p>Автор: Долгов Виктор Александрович</p>
+</footer>
+
+</body>
+</html>
